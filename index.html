@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
     <title>Pixel Studio</title>
-    <link rel="icon" type="image/jpeg" href="./image/favicon.jpeg">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#FFF0F5">
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
 
@@ -1615,6 +1617,13 @@
             const splash = $('splash-screen');
             if (splash) {
                 setTimeout(() => { splash.style.transition = 'opacity 0.5s ease'; splash.style.opacity = '0'; setTimeout(() => splash.style.display = 'none', 500); }, 1000);
+            }
+            
+            // ADDED: Register Service Worker for offline use
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('Service Worker saved!'))
+                    .catch(err => console.error('Service Worker error: ', err));
             }
         };
     </script>
