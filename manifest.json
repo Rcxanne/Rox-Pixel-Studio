@@ -1,0 +1,15 @@
+{
+  "name": "Pixel Studio",
+  "short_name": "PixelStudio",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#FFF0F5",
+  "theme_color": "#FFF0F5",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎀</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
